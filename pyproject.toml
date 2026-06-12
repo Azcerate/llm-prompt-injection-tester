@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llm-prompt-injection-tester"
+version = "0.1.0"
+description = "Test an LLM endpoint against a prompt-injection/jailbreak corpus mapped to MITRE ATLAS."
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+dependencies = ["PyYAML>=6.0"]
+
+[project.scripts]
+pijack = "pijack.cli:main"
+
+[tool.setuptools.package-data]
+"pijack.payloads" = ["*.yaml"]
