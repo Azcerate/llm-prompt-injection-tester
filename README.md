@@ -1,7 +1,7 @@
-# llm-prompt-injection-tester (`pijack`)
+﻿# LLM-Prompt-Injection-Tester (`pijack`)
 
 A defensive test harness that fires a corpus of **prompt-injection and
-jailbreak** payloads at an LLM endpoint and **scores its defenses** — mapped to
+jailbreak** payloads at an LLM endpoint and **scores its defenses** â€” mapped to
 **MITRE ATLAS** adversarial-ML techniques. Point it at any model behind a
 small adapter and get a repeatable defense-rate metric you can gate CI on.
 
@@ -14,7 +14,7 @@ small adapter and get a repeatable defense-rate metric you can gate CI on.
 Prompt injection is the #1 risk in the OWASP LLM Top 10, and "we added a system
 prompt" is not a control until it's tested. This tool gives AI features the same
 treatment we give any other attack surface: a payload corpus, a pass/fail
-metric, and a CI gate — so a regression in your guardrails fails the build
+metric, and a CI gate â€” so a regression in your guardrails fails the build
 instead of shipping.
 
 ## Install
@@ -26,7 +26,7 @@ pip install -e .
 ## Usage
 
 ```bash
-# Built-in undefended baseline (should score 0% — proves detection works)
+# Built-in undefended baseline (should score 0% â€” proves detection works)
 pijack --target echo
 
 # Built-in guarded baseline (input filter + output scrubbing)
@@ -60,7 +60,7 @@ vars; never commit keys. See [`examples/custom_target.py`](examples/custom_targe
 
 8 techniques across direct injection, indirect/poisoned-document injection,
 jailbreaks, obfuscation/encoding, payload splitting, and system-prompt
-extraction — each mapped to a MITRE ATLAS technique ID. Extend or replace via a
+extraction â€” each mapped to a MITRE ATLAS technique ID. Extend or replace via a
 custom corpus YAML (`--corpus`). See [`pijack/payloads/corpus.yaml`](pijack/payloads/corpus.yaml).
 
 ## Example output
@@ -74,8 +74,8 @@ custom corpus YAML (`--corpus`). See [`pijack/payloads/corpus.yaml`](pijack/payl
 
 ## Frameworks referenced
 
-MITRE ATLAS · OWASP Top 10 for LLM Applications (LLM01 Prompt Injection).
+MITRE ATLAS Â· OWASP Top 10 for LLM Applications (LLM01 Prompt Injection).
 
 ## License
 
-MIT © 2026 Anthony N. Saunders
+MIT Â© 2026 Anthony N. Saunders
